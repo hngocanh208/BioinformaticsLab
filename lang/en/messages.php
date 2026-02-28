@@ -24,5 +24,11 @@ return [
     'content_coming_soon_research' => 'Content coming soon for Research topics...',
     'technical_methods' => 'Technical Methods',
     'content_coming_soon_technicals' => 'Content coming soon for Technicals...',
-    'search' => 'Search...'
+    'search' => 'Search...',
+    'feature_1_title' => 'Basic Research',
+    'feature_1_desc' => 'Explore fundamental principles of biological systems through modeling.',
+    'feature_2_title' => 'Data Analysis',
+    'feature_2_desc' => 'Process large volumes of genomic data to find patterns and new insights.',
+    'feature_3_title' => 'International Collaboration',
+    'feature_3_desc' => 'Work alongside leading scientists worldwide to solve global challenges.',
 ];

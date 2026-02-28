@@ -29,13 +29,13 @@ Route::get('/projects', function () {
             'title' => 'Protein Folding Prediction Model',
             'status' => 'Completed',
             'description' => 'Machine learning model predicting 3D structures of proteins from amino acid sequences.',
-            'image_url' => 'https://images.unsplash.com/photo-1614935151651-0bea6508abb0?auto=format&fit=crop&q=80&w=400&h=250',
+            'image_url' => 'https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&q=80&w=400&h=250',
         ],
         [
             'title' => 'Microbiome Diversity Study',
             'status' => 'Planning',
             'description' => 'Studying the diversity of microbiome in various agricultural soils.',
-            'image_url' => 'https://images.unsplash.com/photo-1574068560046-51baf6763a8a?auto=format&fit=crop&q=80&w=400&h=250',
+            'image_url' => 'https://uploads-ssl.webflow.com/61a0875915332c1fd8109f03/638ddba44d5b625b048e871c_measure-microbiome-diversity.jpg',
         ]
     ];
     return view('pages.projects', compact('projects'));

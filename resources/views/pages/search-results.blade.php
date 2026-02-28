@@ -11,10 +11,10 @@
             <div class="space-y-6">
                 @foreach($results as $result)
                     <a href="{{ $result['url'] ?? '#' }}" class="block group bg-white dark:bg-gray-800 p-6 rounded-lg shadow border border-gray-100 dark:border-gray-700 hover:shadow-lg hover:-translate-y-1 transition-all duration-200">
-                        <span class="inline-block bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-300 text-xs px-2 py-1 rounded font-semibold mb-2">
+                        <span class="inline-block bg-red-100 dark:bg-red-900 text-red-800 dark:text-red-300 text-xs px-2 py-1 rounded font-semibold mb-2">
                             {{ $result['type'] }}
                         </span>
-                        <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2 group-hover:text-blue-600 dark:group-hover:text-blue-400">{{ $result['title'] }}</h3>
+                        <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2 group-hover:text-red-600 dark:group-hover:text-red-400">{{ $result['title'] }}</h3>
                         <p class="text-gray-600 dark:text-gray-400">
                             {{ $result['desc'] }}
                         </p>
