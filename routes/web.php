@@ -2,6 +2,13 @@
 
 use Illuminate\Support\Facades\Route;
 
+Route::get('/language/{locale}', function ($locale) {
+    if (in_array($locale, ['en', 'vi'])) {
+        session()->put('locale', $locale);
+    }
+    return redirect()->back();
+})->name('language.switch');
+
 Route::get('/', function () {
     return view('pages.home');
 })->name('home');
@@ -88,3 +95,35 @@ Route::get('/members', function () {
     ];
     return view('pages.members', compact('members'));
 })->name('members');
+
+Route::get('/search', function (\Illuminate\Http\Request $request) {
+    $query = strtolower($request->query('q', ''));
+    $results = [];
+
+    if ($query) {
+        $projects = [
+            ['type' => 'Project', 'url' => url('/projects'), 'title' => 'Genomic Data Analysis Pipeline', 'desc' => 'A comprehensive pipeline for processing and analyzing high-throughput genomic data.'],
+            ['type' => 'Project', 'url' => url('/projects'), 'title' => 'Protein Folding Prediction Model', 'desc' => 'Machine learning model predicting 3D structures of proteins from amino acid sequences.'],
+            ['type' => 'Project', 'url' => url('/projects'), 'title' => 'Microbiome Diversity Study', 'desc' => 'Studying the diversity of microbiome in various agricultural soils.'],
+        ];
+
+        $news = [
+            ['type' => 'News', 'url' => url('/news'), 'title' => 'Lab Publishes New Findings on Bioinformatics', 'desc' => 'Our recent paper on predictive modeling has been published in the leading computational biology journal.'],
+            ['type' => 'News', 'url' => url('/news'), 'title' => 'Annual Research Grant Awarded', 'desc' => 'The lab has been awarded a major grant to continue research on computational genomics.'],
+            ['type' => 'News', 'url' => url('/news'), 'title' => 'Welcome to our New PhD Students', 'desc' => 'We are excited to welcome three new PhD candidates joining our lab this semester.'],
+        ];
+
+        $allData = array_merge($projects, $news);
+
+        foreach ($allData as $item) {
+            if (str_contains(strtolower($item['title']), $query) || str_contains(strtolower($item['desc']), $query)) {
+                $results[] = $item;
+            }
+        }
+    }
+
+    return view('pages.search-results', [
+    'results' => $results,
+    'query' => $request->query('q', '')
+    ]);
+})->name('search');
