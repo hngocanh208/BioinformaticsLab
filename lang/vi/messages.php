@@ -24,5 +24,11 @@ return [
     'content_coming_soon_research' => 'Nội dung cho mảng Nghiên cứu sắp ra mắt...',
     'technical_methods' => 'Phương pháp Kỹ thuật',
     'content_coming_soon_technicals' => 'Nội dung cho mảng Kỹ thuật sắp ra mắt...',
-    'search' => 'Tìm kiếm...'
+    'search' => 'Tìm kiếm...',
+    'feature_1_title' => 'Nghiên cứu Cơ bản',
+    'feature_1_desc' => 'Khám phá các nguyên tắc cơ bản của hệ thống sinh học thông qua mô hình hóa.',
+    'feature_2_title' => 'Phân tích Dữ liệu',
+    'feature_2_desc' => 'Xử lý khối lượng lớn dữ liệu gen để tìm ra các mẫu và hiểu biết mới.',
+    'feature_3_title' => 'Hợp tác Quốc tế',
+    'feature_3_desc' => 'Làm việc cùng các nhà khoa học hàng đầu trên thế giới để giải quyết thách thức toàn cầu.',
 ];

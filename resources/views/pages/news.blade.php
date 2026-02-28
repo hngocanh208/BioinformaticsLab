@@ -14,14 +14,14 @@
                             <time datetime="{{ $article['date'] }}">{{ \Carbon\Carbon::parse($article['date'])->format('M d, Y') }}</time>
                         </div>
                         <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">
-                            <a href="#" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">{{ $article['title'] }}</a>
+                            <a href="#" class="hover:text-red-600 dark:hover:text-red-400 transition-colors">{{ $article['title'] }}</a>
                         </h3>
                         <p class="text-gray-600 dark:text-gray-400 text-base">
                             {{ $article['excerpt'] }}
                         </p>
                     </div>
                     <div class="px-6 py-4 bg-gray-50 dark:bg-gray-700 border-t border-gray-100 dark:border-gray-600 mt-auto">
-                        <a href="#" class="text-sm font-medium text-blue-600 dark:text-blue-400 hover:text-blue-500 dark:hover:text-blue-300">{{ __('messages.read_article') }} &rarr;</a>
+                        <a href="#" class="text-sm font-medium text-red-600 dark:text-red-400 hover:text-red-500 dark:hover:text-red-300">{{ __('messages.read_article') }} &rarr;</a>
                     </div>
                 </div>
             @endforeach

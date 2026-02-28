@@ -2,7 +2,7 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="md:flex md:items-center md:justify-between">
             <div class="flex justify-center md:justify-start space-x-6 md:order-2">
-                <a href="mailto:contact@biolab.edu" class="text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition">
+                <a href="mailto:contact@biolab.edu" class="text-gray-500 dark:text-gray-400 hover:text-red-600 dark:hover:text-red-400 transition">
                     contact@biolab.edu
                 </a>
                 <span class="text-gray-400 dark:text-gray-600">|</span>
